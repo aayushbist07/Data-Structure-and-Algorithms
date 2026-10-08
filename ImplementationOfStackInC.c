@@ -1,11 +1,13 @@
 #include <stdio.h>
+
 #define MAX 5
+
 int stack[MAX], top = -1;
 
 void push(int val)
 {
     if (top == MAX - 1)
-        printf("Stack Overflow \n");
+        printf("Stack Overflow\n");
     else
         stack[++top] = val;
 }
@@ -17,22 +19,25 @@ void pop()
     else
         top--;
 }
+
 int peek()
 {
     if (top != -1)
         return stack[top];
-    return -1; // indicates stack is empty
+
+    return -1;
 }
 
 int isFull()
 {
-    return top== MAX-1;
+    return top == MAX - 1;
 }
 
 int isEmpty()
 {
     return top == -1;
 }
+
 int main()
 {
     push(10);
@@ -42,6 +47,8 @@ int main()
     pop();
 
     push(40);
+
+    printf("Top element: %d\n", peek());
 
     if (isEmpty())
         printf("Stack is Empty\n");
