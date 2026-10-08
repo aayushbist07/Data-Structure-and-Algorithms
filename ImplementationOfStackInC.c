@@ -39,25 +39,12 @@ int main()
     push(20);
     push(30);
 
-    printf("Top element: %d\n", stack[top]);
-
     pop();
 
-    printf("Top element after pop: %d\n", stack[top]);
+    push(40);
 
     if (isEmpty())
         printf("Stack is Empty\n");
-    else
-        printf("Stack is Not Empty\n");
-
-    if (isFull())
-        printf("Stack is Full\n");
-    else
-        printf("Stack is Not Full\n");
-
-    push(40);
-    push(50);
-    push(60);
 
     if (isFull())
         printf("Stack is Full\n");
